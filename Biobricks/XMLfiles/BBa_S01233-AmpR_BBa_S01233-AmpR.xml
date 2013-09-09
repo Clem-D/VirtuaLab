@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<list>
+  <experiment>
+    <number>1</number>
+    <date>06/28/2013</date>
+    <technician>qsdv</technician>
+    <member_name>qsdv</member_name>
+    <method>aze</method>
+    <antibiotic>AmpR</antibiotic>
+    <short_desc>zed</short_desc>
+    <succeed>yes</succeed>
+  </experiment>
+  <experiment>
+    <number>2</number>
+    <date>06/32/2013</date>
+    <technician>azer</technician>
+    <member_name>azer</member_name>
+    <method>zergfe</method>
+    <antibiotic>KanR</antibiotic>
+    <short_desc>zdef</short_desc>
+    <succeed>no</succeed>
+  </experiment>
+</list>

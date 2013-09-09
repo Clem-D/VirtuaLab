@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<list>
+  <experiment>
+    <number>1</number>
+    <date>06/27/2013</date>
+    <technician>ds</technician>
+    <member_name>ds</member_name>
+    <method>fd</method>
+    <antibiotic>AmpR</antibiotic>
+    <short_desc>ds</short_desc>
+    <succeed>yes</succeed>
+  </experiment>
+  <experiment>
+    <number>2</number>
+    <date>06/27/2013</date>
+    <technician>michel_encore</technician>
+    <member_name>michel_encore</member_name>
+    <method>fd</method>
+    <antibiotic>AmpR</antibiotic>
+    <short_desc>fdfd</short_desc>
+    <succeed>yes</succeed>
+  </experiment>
+</list>

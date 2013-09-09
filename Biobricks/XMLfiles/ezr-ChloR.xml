@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<experiment>
+  <seq_name>zertt</seq_name>
+  <igem_name>ezr</igem_name>
+  <antibio>ChloR</antibio>
+  <short_desc>rrt</short_desc>
+  <member_name>root</member_name>
+  <date>07/02/2013</date>
+</experiment>

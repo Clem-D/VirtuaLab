@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<row>
+  <seq_name>test_clem</seq_name>
+  <igem_name>BBa_S01233</igem_name>
+  <antibio>KanR</antibio>
+  <short_desc>test de l image</short_desc>
+  <member_name>root</member_name>
+</row>

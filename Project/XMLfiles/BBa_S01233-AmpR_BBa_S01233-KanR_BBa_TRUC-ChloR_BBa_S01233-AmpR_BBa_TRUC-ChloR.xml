@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<list>
+  <experiment>
+    <number>1</number>
+    <date>2013/06/27</date>
+    <technician></technician>
+    <method></method>
+    <antibiotic>TetR</antibiotic>
+    <comments></comments>
+    <succeed>yes</succeed>
+  </experiment>
+</list>

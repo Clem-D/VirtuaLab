@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<project>
+  <date>2013/06/27</date>
+  <group>root</group>
+  <team>root</team>
+  <brick>BBa_S01233-AmpR</brick>
+  <brick>BBa_S01233-KanR</brick>
+  <brick>BBa_TRUC-ChloR</brick>
+  <brick>QSDFG-AmpR</brick>
+  <brick>BBa_S01233-AmpR</brick>
+  <brick>BBa_S01233-AmpR</brick>
+  <level0>
+    <name>BBa_S01233-AmpR_BBa_S01233-KanR</name>
+    <name>BBa_TRUC-ChloR_BBa_S01233-AmpR</name>
+  </level0>
+  <level1>
+    <name>BBa_S01233-AmpR_BBa_S01233-KanR_BBa_TRUC-ChloR_BBa_S01233-AmpR</name>
+  </level1>
+  <level2>
+    <name>BBa_S01233-AmpR_BBa_S01233-KanR_BBa_TRUC-ChloR_BBa_S01233-AmpR_BBa_TRUC-ChloR</name>
+  </level2>
+</project>

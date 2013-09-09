@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<project>
+  <date>06/27/2013</date>
+  <group>root</group>
+  <team>root</team>
+  <brick>BBa_S01233-KanR</brick>
+  <brick>BBa_S01288-ChloR</brick>
+  <brick>re-AmpR</brick>
+  <level0>
+    <name>BBa_S01233-KanR_re-AmpR</name>
+  </level0>
+  <level1>
+    <name>re-AmpR_re-AmpR</name>
+  </level1>
+</project>

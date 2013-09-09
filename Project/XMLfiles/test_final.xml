@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<project>
+  <date>2013/06/26</date>
+  <group>root</group>
+  <team>root</team>
+  <brick>BBa_S01233-AmpR</brick>
+  <brick>BBa_S01233-KanR</brick>
+  <brick>BBa_S01233-KanR</brick>
+  <brick>QSDFG-AmpR</brick>
+  <level0>
+    <name>BBa_S01233-KanR_BBa_S01233-AmpR</name>
+  </level0>
+</project>

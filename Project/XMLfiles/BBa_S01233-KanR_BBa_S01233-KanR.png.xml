@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<list>
+  <experiment>
+    <number>1</number>
+    <date>2013/06/26</date>
+    <technician>Michel</technician>
+    <method>larrache</method>
+    <antibiotic>AmpR</antibiotic>
+    <comments>bon on fait allez quoi</comments>
+    <succeed>no</succeed>
+  </experiment>
+  <experiment>
+    <number>2</number>
+    <date>2013/06/26</date>
+    <technician>michel_encore</technician>
+    <method>man</method>
+    <antibiotic>ChloR</antibiotic>
+    <comments>hihi</comments>
+    <succeed>yes</succeed>
+  </experiment>
+</list>
