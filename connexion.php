@@ -10,7 +10,7 @@ if ($pseudocheck){
 			session_start();    
 			$_SESSION['pseudo'] = $pseudo;
 			$_SESSION['team'] = $team;			
-			// $_SESSION['group']=checkGroup(); // fonction qui va lire le fichier xml et chercher le groupe du membre
+			// $_SESSION['group']=checkGroup(); // group is not avaible yet...
 			header('Location: rubrics/home.php');  
 	}
 	else {
