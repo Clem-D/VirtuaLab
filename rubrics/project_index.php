@@ -33,7 +33,7 @@ include($_SERVER['DOCUMENT_ROOT']."/virtuLab/utils/header.php");
 <span id="pseudo"> <?php echo $_SESSION['pseudo']; ?> </span></h1>
 
 <h2>Project</h2>
-<p>Here you can use the menu at the top for create, see, join or delete project.</p>
+<p>Here you can use the menu at the top to create, see, join or delete project(s).</p>
 </section>
 
 <?php include($_SERVER['DOCUMENT_ROOT'].'/virtuLab/utils/footer.php');?>

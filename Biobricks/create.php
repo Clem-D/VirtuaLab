@@ -43,6 +43,7 @@ if (isset($_POST['add'])){
   //$direction='../Pictures/'.$name.'.png';  // $_SERVER['DOCUMENT_ROOT'].
   
   $direction='../Pictures/'. $igem_name . '-' . $antibio.'.png';   //new name (test)
+	shell_exec('chmod 777 '.$direction);
   
     
   $image = imagecreate($size,20);             

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Formuaire IGEM</title>
+
+    <style>
+      body {
+       padding-top: 50px;
+      }
+
+      .form_col {
+        display: inline-block;
+        margin-right: 15px;
+        padding: 3px 0px;
+        width: 200px;
+        min-height: 1px;
+        text-align: right;
+      }
+
+      input {
+        padding: 2px;
+        border: 1px solid #CCC;
+        -moz-border-radius: 2px;
+        -webkit-border-radius: 2px;
+        border-radius: 2px;
+      }
+
+      input:focus {
+        border-color: rgba(82, 168, 236, 0.75);
+        -moz-box-shadow: 0 0 8px rgba(82, 168, 236, 0.5);
+        -webkit-box-shadow: 0 0 8px rgba(82, 168, 236, 0.5);
+        box-shadow: 0 0 8px rgba(82, 168, 236, 0.5);
+      }
+
+      .correct {
+        border-color: rgba(68, 191, 68, 0.75);
+      }
+
+      .correct:focus {
+        border-color: rgba(68, 191, 68, 0.75);
+        -moz-box-shadow: 0 0 8px rgba(68, 191, 68, 0.5);
+        -webkit-box-shadow: 0 0 8px rgba(68, 191, 68, 0.5);
+        box-shadow: 0 0 8px rgba(68, 191, 68, 0.5);
+      }
+
+      .incorrect {
+        border-color: rgba(191, 68, 68, 0.75);
+      }
+
+      .incorrect:focus {
+        border-color: rgba(191, 68, 68, 0.75);
+        -moz-box-shadow: 0 0 8px rgba(191, 68, 68, 0.5);
+        -webkit-box-shadow: 0 0 8px rgba(191, 68, 68, 0.5);
+        box-shadow: 0 0 8px rgba(191, 68, 68, 0.5);
+      }
+
+      .tooltip {
+        display: inline-block;
+        margin-left: 20px;
+        padding: 2px 4px;
+        border: 1px solid #555;
+        background-color: #CCC;
+        -moz-border-radius: 4px;
+        -webkit-border-radius: 4px;
+        border-radius: 4px;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <form id="myForm">
+
+    
+
+      <label class="form_col" for="age">Nombre de biobricks :</label>
+      <input name="age" id="age" type="text" />
+      <span class="tooltip">Le nombre de biobricks  entre 5 et 140</span>
+      <br /><br />
+
+     
+
+      <label class="form_col" for="country">Nombre de biobricks :</label>
+
+      <select name="country" id="country">
+        <option value="none">Sélectionnez le nombre de biobricks</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+      </select>
+      <span class="tooltip">Vous devez sélectionner un nombre de biobrick</span>
+
+      <br /><br />
+
+     
+
+      <span class="form_col"></span>
+      <input type="submit" value="Valider" /> <input type="reset" value="Réinitialiser le formulaire" />
+
+    </form>
+
+
+    <script>
+
+        // Fonction de désactivation de l'affichage des "tooltips"
+        
+        function deactivateTooltips() {
+        
+            var spans = document.getElementsByTagName('span'),
+            spansLength = spans.length;
+            
+            for (var i = 0 ; i < spansLength ; i++) {
+                if (spans[i].className == 'tooltip') {
+                    spans[i].style.display = 'none';
+                }
+            }
+        
+        }
+
+
+        // La fonction ci-dessous permet de récupérer la "tooltip" qui correspond à notre input
+
+        function getTooltip(elements) {
+        
+            while (elements = elements.nextSibling) {
+                if (elements.className === 'tooltip') {
+                    return elements;
+                }
+            }
+            
+            return false;
+        
+        }
+
+
+        // Fonctions de vérification du formulaire, elles renvoient "true" si tout est ok
+
+        var check = {}; // On met toutes nos fonctions dans un objet littéral
+
+     
+        check['age'] = function() {
+
+            var age = document.getElementById('age'),
+                tooltipStyle = getTooltip(age).style,
+                ageValue = parseInt(age.value);
+            
+            if (!isNaN(ageValue) && ageValue >= 5 && ageValue <= 140) {
+                age.className = 'correct';
+                tooltipStyle.display = 'none';
+                return true;
+            } else {
+                age.className = 'incorrect';
+                tooltipStyle.display = 'inline-block';
+                return false;
+            }
+
+        };
+
+        
+
+        check['country'] = function() {
+    
+            var country = document.getElementById('country'),
+                tooltipStyle = getTooltip(country).style;
+            
+            if (country.options[country.selectedIndex].value != 'none') {
+                tooltipStyle.display = 'none';
+
+                return true;
+            } else {
+                tooltipStyle.display = 'inline-block';
+		
+                return false;
+            }
+        
+        };
+
+  getNumber= function() {
+            var country = document.getElementById('country');
+			return parseInt(country.options[country.selectedIndex].value);
+        };
+
+printNom=function(nb){
+	if ( isNaN(nb) ){
+		nb=0;
+	}
+	for (var i=0;i<nb;i++){
+		alert('loop');
+		var label = document.createElement('label');
+		label.appendChild(document.createTextNode('nom de la biobrick');
+		document.body.appendChild(label);
+		alert('ici');
+	}
+};
+
+
+        // Mise en place des événements
+        
+        (function() { // Utilisation d'une fonction anonyme pour éviter les variables globales.
+        
+            var myForm = document.getElementById('myForm'),
+                inputs = document.getElementsByTagName('input'),
+                inputsLength = inputs.length;
+        
+            for (var i = 0 ; i < inputsLength ; i++) {
+                if (inputs[i].type == 'text' || inputs[i].type == 'password') {
+        
+                    inputs[i].onkeyup = function() {
+                        check[this.id](this.id); // "this" représente l'input actuellement modifié
+                    };
+        
+                }
+            }
+        
+            myForm.onsubmit = function() {
+        
+                var result = true;
+        
+                for (var i in check) {
+                    result = check[i](i) && result;
+					if (i=='country'){
+alert('ICI');
+						nb = getNumber();
+						alert(nb);
+						printNom(nb);
+					}
+                }
+        
+                if (result) {
+                    alert('Le formulaire est bien rempli.');
+                }
+        
+                return false;
+        
+            };
+        
+            myForm.onreset = function() {
+        
+                for (var i = 0 ; i < inputsLength ; i++) {
+                    if (inputs[i].type == 'text' || inputs[i].type == 'password') {
+                        inputs[i].className = '';
+                    }
+                }
+        
+                deactivateTooltips();
+        
+            };
+        
+        })();
+
+
+        // Maintenant que tout est initialisé, on peut désactiver les "tooltips"
+        
+        deactivateTooltips();
+
+    </script>
+
+  </body>
+</html>

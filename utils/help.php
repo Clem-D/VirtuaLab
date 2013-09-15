@@ -31,9 +31,9 @@ include("header.php");
 <section>
     <h1>HELP</h1>
     <h2>What is it ? </h2>
-    <p>This is a web site for manage IGEM's tasks.</p>
+    <p>This is a web site to manage IGEM's tasks.</p>
     <h2>What's the point ? </h2>
-    <p>It eases your IGEM's project arrangement : It can show who use what biobricks for what project etc.</p>
+    <p>It eases your IGEM's project arrangement : It can show who use which biobricks for which projects etc.</p>
     <h2>How can I use it ?</h2>
     <p>First, click on the Biobricks menu on your left then manage the Biobricks you will use for your projects. Then, manage your project with theses Biobricks, thanks to the Project menu on your left.</p>
     <!--

@@ -1,4 +1,5 @@
 <?php 
+
 /*
 
 Copyright (C) 2013  Clément DELESTRE
@@ -21,16 +22,11 @@ Copyright (C) 2013  Clément DELESTRE
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
     
     */
-/* ----------------------------------------
-           Project's biobricks 
- ------------------------------------------- */
 
 $bNb=count($names);
 echo "<div id='project'>
     <h1 id='title'>$project</h1> 
     <section class='level'>";
-    
-     echo"<p>Drag and drop a biobrick in a task (rectangle).<br>When two biobrick are in the same rectangle, they are assembled. You can use this new biobrick on an another level.<br>Click on new task for add a task and click on new level for add a level.  </p>";
 
 $id = 0;
 for($i=0;$i<$bNb;$i++){

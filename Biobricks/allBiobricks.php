@@ -62,26 +62,22 @@ include('../utils/footer.php');
 
 function seeAllXML() {
 
-    $querry = shell_exec('ls -l XMLfiles/ | cut -c49-');
-
-    $files = preg_split('#\s#', $querry);
-
-  
-
-    foreach ($files as $elements) {
+    exec('ls XMLfiles',$querry);
+    foreach ($querry as $elements) {
         XMLFiles($elements);
     }
 }
 
 function XMLFiles($name) {
-
     $dom = new DOMDocument();
     $dom->preserveWhiteSpace = false;
     $dom->formatOutput = true;
-    $dom->load('XMLfiles/' . $name);
+    $dom->load('XMLfiles/'.$name);
+
     global $xmlresults;
 
-    $row = $dom->getElementsByTagName('row');
+    $row = $dom->getElementsByTagName('experiment');
+
     foreach ($row as $elem) {
         $children = $elem->childNodes;
 

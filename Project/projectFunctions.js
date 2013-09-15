@@ -19,16 +19,16 @@ function drop(ev,id)
     var bool = confirm("Do you want to add : "+brick+"?");
 
     if (bool === true){
-		if (save.value !==''){
-	    	document.getElementById('save2').value = img;	
-		}
-		else {
-			save.value = img ;
-		}
-		var object = ev.target.appendChild(biobrick); 
-		var title = document.getElementById('title'); 
-		var project = title.innerHTML;
-		stick(id,project);
+	if (save.value !==''){
+	    document.getElementById('save2').value = img;	
+	}
+	else {
+	    save.value = img ;
+	}
+	var object = ev.target.appendChild(biobrick); 
+        var title = document.getElementById('title'); 
+        var project = title.innerHTML;
+	stick(id,project);
     }
 }
 
@@ -49,14 +49,14 @@ function createImage(task_id,img_id,img1,img2,button_id)
 {
     var myAjax;
     if(window.XMLHttpRequest){
-		myAjax = new XMLHttpRequest();
+	myAjax = new XMLHttpRequest();
     }
     myAjax.open('POST','image.php',false);
 
     myAjax.onreadystatechange = function()
     {
 	if(myAjax.readyState === 4 && myAjax.status === 200){
-	  name=myAjax.responseText;
+	    name=myAjax.responseText;
 	    var img = document.createElement('img');	    
 	    var title = name.split('/')[2];
 	    title = title.split('.')[0];

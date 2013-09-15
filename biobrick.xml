@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="iso-8859-1" standalone="yes"?>
+<!--<mysqldump xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<database name="bbdb">-->
+<!-- first one from the original file -->
+<table_structure name="parts">
+  <row>
+    <part_name>BBa_S01288</part_name>
+    <short_desc>Intermediate part from assembly 236</short_desc>
+    <!-- add one field for our project -->
+    <member_name>1</member_name>
+  </row>
+  <!-- test -->
+  <row>
+    <part_name>BBa_S1</part_name>
+    <short_desc>Mon_Test</short_desc>
+    <member_name>1</member_name>
+  </row>
+  <row>
+    <part_name>BBa_S2</part_name>
+    <short_desc>Test de saisie</short_desc>
+    <member_name>2</member_name>
+  </row>
+  <row>
+    <part_name>BBa_S3</part_name>
+    <short_desc>Test de saisie</short_desc>
+    <member_name>2</member_name>
+  </row>
+  <row>
+    <part_name>BBa_S4</part_name>
+    <short_desc>Test de saisie</short_desc>
+    <member_name>2</member_name>
+  </row>
+  <row>
+    <part_name>BBA_584</part_name>
+    <short_desc>desc</short_desc>
+    <member_name>john</member_name>
+  </row>
+  <row>
+    <part_name>sdf</part_name>
+    <short_desc>sdf</short_desc>
+    <member_name/>
+  </row>
+  <row>
+    <part_name>BB</part_name>
+    <short_desc>Une BB ecrite a distance</short_desc>
+    <member_name>clem</member_name>
+  </row>
+  <row>
+    <part_name>addbrick</part_name>
+    <short_desc> Une petite biobrick swagg</short_desc>
+    <member_name>clem</member_name>
+  </row>
+  <row>
+    <part_name>addbrick</part_name>
+    <short_desc> Une petite biobrick swagg</short_desc>
+    <member_name>clem</member_name>
+  </row>
+  <row>
+    <part_name>hihi</part_name>
+    <short_desc>Last test</short_desc>
+    <member_name>clem</member_name>
+  </row>
+  <row>
+    <part_name>aze</part_name>
+    <short_desc>aze</short_desc>
+    <member_name>root</member_name>
+  </row>
+</table_structure>

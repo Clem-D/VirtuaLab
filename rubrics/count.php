@@ -32,19 +32,19 @@ Copyright (C) 2013  Clément DELESTRE
  
 session_start();
 
-$title="My Count - Virtu-Lab";
-$rubric="Count";
+$title="My Account - Virtu-Lab";
+$rubric="Count"; // to change
 
 include("../utils/header.php");
 ?>		
 
 
 <section>
-<h1>Welcome to your count,
+<h1>Welcome to your account,
 <span id="pseudo"> <?php echo $_SESSION['pseudo']; ?> </span></h1>
 
 <h2>Your count</h2>
-<p>Here you can use the menu at the top for see and change informations about your count and your team.</p>
+<p>Here you can use the menu at the top to see and change informations about your account and your team.</p>
 
     </section>
 

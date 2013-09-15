@@ -1,43 +1,43 @@
-html{	
-	height: 100%; 
+html{   
+    height: 100%; 
 }
-body {	
-	background-color: rgb(44,53,98);	
-	width: 100%;	
-	margin-left: auto;
-	margin-right: auto; /* -> 3 */
-	display : block;
+body {  
+    background-color: rgb(44,53,98);    
+    width: 100%;    
+    margin-left: auto;
+    margin-right: auto; /* -> 3 */
+    display : block;
 }
-#global{	
-	width:75%;
-	margin-left: auto;
-	margin-right: auto; 
-	background-color: rgb(100,153,198);
+#global{    
+    width:75%;
+    margin-left: auto;
+    margin-right: auto; 
+    background-color: rgb(100,153,198);
 }
 header{
-	background-color: rgb(44,53,98);
-	text-align: center;
-	margin-left: auto;
-	margin-right: auto;
+    background-color: rgb(44,53,98);
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
-#content{	
-	background-color: white;
-	margin-bottom: 20px;
+#content{   
+    background-color: white;
+    margin-bottom: 20px;
 }
 section{
-	margin-left: 170px;
+    margin-left: 170px;
 }
 aside{
     display: inline-block;
-	text-align: center;	
+    text-align: center; 
 }
 footer{
-  
+    
   text-align: center;  
   background-color: rgb(100,153,198);
   color: #444;
 }
-
+  
 .bordure
 {
     border-radius: 10px;
@@ -48,21 +48,21 @@ footer{
     text-align: center;
     padding: 12px;
     margin-bottom: 20px;
-	/*box-shadow: 6px 6px 0px black;*/	
+    /*box-shadow: 6px 6px 0px black;*/  
 }
-
+  
 li.test {
-	display: block;
+    display: block;
 }
-
+  
 ul.test {
-	list-style-type: circle;
+    list-style-type: circle;
 }
-
+  
 /* TABLEAUX */
 table.tableau
 {
-
+  
 border-spacing: 0; /* border-collapse simulation*/
 border-radius:10px;
 overflow: hidden;
@@ -74,78 +74,78 @@ margin: auto;
 border: 1px groove black;
 margin-bottom: 20px;
 }
-
-
+  
+  
 td.tabletd /* Toutes les cellules des tableaux... */
 {
  /* auront une bordure de 1px */
  border: 1px groove black;
  padding: 7px 4px;
 }
-
-
+  
+  
 tr.tabletr /* Toutes les lignes des tableaux... */
 {
  /* auront une bordure de 1px */
  border: 1px groove black;
  padding: 7px 4px;
 }
-
+  
 th.tableth
 {
 border: 2px groove black;
 padding: 7px 4px;
 background : #8A8AE6;
 }
-
-#nav, #nav ul { /* toutes les listes */	
-	list-style: none;
-	line-height: 1;
-	text-align: center;
-	background-color: rgb(100,153,198);
-	padding:6px;
-	margin:0;	
-
+  
+#nav, #nav ul { /* toutes les listes */ 
+    list-style: none;
+    line-height: 1;
+    text-align: center;
+    background-color: rgb(100,153,198);
+    padding:6px;
+    margin:0;   
+  
 }
-
+  
 #nav a {
-	display: block;
-	width: 10em;		
-	line-height: 1.5;
-	font-size: 1 em;
-	text-decoration: none;
-	color: black;
+    display: block;
+    width: 10em;        
+    line-height: 1.5;
+    font-size: 1 em;
+    text-decoration: none;
+    color: black;
 }
-
-#nav li { /* tous les items de liste */	
-	display: inline-block;
-	width: 10em; /* largeur obligatoire, sinon opera devient fou */	
+  
+#nav li { /* tous les items de liste */ 
+    display: inline-block;
+    width: 10em; /* largeur obligatoire, sinon opera devient fou */ 
 }
-
+  
 #nav li ul { /* listes de deuxième niveau */
-	display: inline;
-	padding:0;
-	margin: 0em -1em -1em -5em;	/*change the last one*/
-	position: absolute;	
-	width: 10em;
-	left: -999em; /* on met left plutôt que display pour cacher les menus parce que display: none n'est pas lu par les lecteurs d'écran */	
+    display: inline;
+    padding:0;
+    margin: 0em -1em -1em -5em; /*change the last one*/
+    position: absolute; 
+    width: 10em;
+    left: -999em; /* on met left plutôt que display pour cacher les menus parce que display: none n'est pas lu par les lecteurs d'écran */  
 }
 #nav a:hover, nav a:focus {
-	width: 10em;
-	background: #FFFF66;
+    width: 10em;
+    background: #FFFF66;
 }
 #nav li:hover ul, #nav li.sfhover ul { /* listes imbriquées sous les items de listes survolés */
-	left: auto;
-	background-color: #2E5CE6 ;
-
+    left: auto;
+    background-color: #2E5CE6 ;
+  
 }
-
+  
 img{
     display : block;
     margin-right : auto;
     margin-left :auto;
 }
-
+  
 .biobrick{    
     display : inline-block; 
     margin : 6px 6px 6px 6px;
@@ -153,74 +153,74 @@ img{
     border : 2px groove black;
     border-radius: 5px;
 }
-
+  
 .option{
     /*display : inline-block;*/ /*PB*/
     width : 97%;
     margin: auto;
 }
-
+  
 #details{
     width : 60%;
     margin : auto;
     text-align : center;
 }
-
+  
 #project{
     width : 95%;
     margin : auto;
     text-align : center;
 }
-
+  
 .save{
     float : right;
     margin-right : 1%;
     margin-bottom : 5%; 
 }
-
+  
 /* RAJOUTS DE CLEMENT */
-
+  
 #horizontalist{
-	float : left;
-	width: 150px;
-	/*border: 1px solid black;*/
-
+    float : left;
+    width: 150px;
+    /*border: 1px solid black;*/
+  
 }
 /* section */
-
-
+  
+  
 #horizontalist a:hover, nav a:focus {
-	width: 10em;
-	background: #FFFF66;
+    width: 10em;
+    background: #FFFF66;
 }
-
+  
 #horizontalist a {
-	text-decoration: none;
-	color: rgb(46,74,144)  ;	
+    text-decoration: none;
+    color: rgb(46,74,144)  ;    
 }
-
+  
 #current{
  font-size: 23px;
  background-color:#CCE6FF;
 }
-
+  
 #currentli {
 list-style-type:disc;
 }
-
+  
 li.notcurrent{
 list-style-type:circle;
 }
-
+  
 #pseudo{
 color: rgb(0,0,210);
 }
-
+  
 h2{
 text-decoration: underline;
 color: rgb(139,204,200);
 }
-
+  
 .task{    
     display : inline-block; 
     margin : 10px 10px 10px 10px;
@@ -229,49 +229,49 @@ color: rgb(139,204,200);
     padding : 10px;
     height : 30px;
     min-width : 180px;
-    
+      
 }
-
+  
  newBrick{
     margin : auto;
 }
-
+  
 .level2{
     margin-left: 150px;
     float : left;
     padding : 20px;
 }
-
-
+  
+  
 h3{
   font-weight:bold;
   color:#0000B2;
 }
-
+  
 .titlepicture{
-	display: block;
-	margin: 0 auto; 
-	width: 100%; 
-	height: 100%;
-	max-width: 960px; 
+    display: block;
+    margin: 0 auto; 
+    width: 100%; 
+    height: 100%;
+    max-width: 960px; 
 max-height: 250px;
 }
-
+  
 .message {
     font-style : italic;
     color : #5D5E51;
 }
-
+  
 .task em{
     display : none;
 }
-
+  
 .task:hover{
     position: relative;
     z-index: 500;
     text-decoration:none;
 }
-
+  
 .task:hover em {
     display: block;
     position: absolute;
@@ -282,4 +282,288 @@ max-height: 250px;
     border: 1px solid black;
     background: black;
     width:360px;
+} html{   
+    height: 100%; 
 }
+body {  
+    background-color: rgb(44,53,98);    
+    width: 100%;    
+    margin-left: auto;
+    margin-right: auto; /* -> 3 */
+    display : block;
+}
+#global{    
+    width:75%;
+    margin-left: auto;
+    margin-right: auto; 
+    background-color: rgb(100,153,198);
+}
+header{
+    background-color: rgb(44,53,98);
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+#content{   
+    background-color: white;
+    margin-bottom: 20px;
+}
+section{
+    margin-left: 170px;
+}
+aside{
+    display: inline-block;
+    text-align: center; 
+}
+footer{
+    
+  text-align: center;  
+  background-color: rgb(100,153,198);
+  color: #444;
+}
+  
+.bordure
+{
+    border-radius: 10px;
+    border: blue groove;
+    width: 350px; /* On a indiqué une largeur (obligatoire) */
+    margin: auto; /* On peut donc demander à ce que le bloc soit centré avec auto */
+    /*border: 1px solid black;*/
+    text-align: center;
+    padding: 12px;
+    margin-bottom: 20px;
+    /*box-shadow: 6px 6px 0px black;*/  
+}
+  
+li.test {
+    display: block;
+}
+  
+ul.test {
+    list-style-type: circle;
+}
+  
+/* TABLEAUX */
+table.tableau
+{
+  
+border-spacing: 0; /* border-collapse simulation*/
+border-radius:10px;
+overflow: hidden;
+/*margin: 10px 0 30px 0;*/
+text-align: center;
+background: #A3DIFF ;
+box-shadow: 6px 6px 6px DarkSlateBlue;
+margin: auto;
+border: 1px groove black;
+margin-bottom: 20px;
+}
+  
+  
+td.tabletd /* Toutes les cellules des tableaux... */
+{
+ /* auront une bordure de 1px */
+ border: 1px groove black;
+ padding: 7px 4px;
+}
+  
+  
+tr.tabletr /* Toutes les lignes des tableaux... */
+{
+ /* auront une bordure de 1px */
+ border: 1px groove black;
+ padding: 7px 4px;
+}
+  
+th.tableth
+{
+border: 2px groove black;
+padding: 7px 4px;
+background : #8A8AE6;
+}
+  
+#nav, #nav ul { /* toutes les listes */ 
+    list-style: none;
+    line-height: 1;
+    text-align: center;
+    background-color: rgb(100,153,198);
+    padding:6px;
+    margin:0;   
+  
+}
+  
+#nav a {
+    display: block;
+    width: 10em;        
+    line-height: 1.5;
+    font-size: 1 em;
+    text-decoration: none;
+    color: black;
+}
+  
+#nav li { /* tous les items de liste */ 
+    display: inline-block;
+    width: 10em; /* largeur obligatoire, sinon opera devient fou */ 
+}
+  
+#nav li ul { /* listes de deuxième niveau */
+    display: inline;
+    padding:0;
+    margin: 0em -1em -1em -5em; /*change the last one*/
+    position: absolute; 
+    width: 10em;
+    left: -999em; /* on met left plutôt que display pour cacher les menus parce que display: none n'est pas lu par les lecteurs d'écran */  
+}
+#nav a:hover, nav a:focus {
+    width: 10em;
+    background: #FFFF66;
+}
+#nav li:hover ul, #nav li.sfhover ul { /* listes imbriquées sous les items de listes survolés */
+    left: auto;
+    background-color: #2E5CE6 ;
+  
+}
+  
+img{
+    display : block;
+    margin-right : auto;
+    margin-left :auto;
+}
+  
+.biobrick{    
+    display : inline-block; 
+    margin : 6px 6px 6px 6px;
+    padding : 5px;
+    border : 2px groove black;
+    border-radius: 5px;
+}
+  
+.option{
+    /*display : inline-block;*/ /*PB*/
+    width : 97%;
+    margin: auto;
+}
+  
+#details{
+    width : 60%;
+    margin : auto;
+    text-align : center;
+}
+  
+#project{
+    width : 95%;
+    margin : auto;
+    text-align : center;
+}
+  
+.save{
+    float : right;
+    margin-right : 1%;
+    margin-bottom : 5%; 
+}
+  
+/* RAJOUTS DE CLEMENT */
+  
+#horizontalist{
+    float : left;
+    width: 150px;
+    /*border: 1px solid black;*/
+  
+}
+/* section */
+  
+  
+#horizontalist a:hover, nav a:focus {
+    width: 10em;
+    background: #FFFF66;
+}
+  
+#horizontalist a {
+    text-decoration: none;
+    color: rgb(46,74,144)  ;    
+}
+  
+#current{
+ font-size: 23px;
+ background-color:#CCE6FF;
+}
+  
+#currentli {
+list-style-type:disc;
+}
+  
+li.notcurrent{
+list-style-type:circle;
+}
+  
+#pseudo{
+color: rgb(0,0,210);
+}
+  
+h2{
+text-decoration: underline;
+color: rgb(139,204,200);
+}
+  
+.task{    
+    display : inline-block; 
+    margin : 10px 10px 10px 10px;
+    border : 1px solid grey;
+    background : white;
+    padding : 10px;
+    height : 30px;
+    min-width : 180px;
+      
+}
+  
+ newBrick{
+    margin : auto;
+}
+  
+.level2{
+    margin-left: 150px;
+    float : left;
+    padding : 20px;
+}
+  
+  
+h3{
+  font-weight:bold;
+  color:#0000B2;
+}
+  
+.titlepicture{
+    display: block;
+    margin: 0 auto; 
+    width: 100%; 
+    height: 100%;
+    max-width: 960px; 
+max-height: 250px;
+}
+  
+.message {
+    font-style : italic;
+    color : #5D5E51;
+}
+  
+.task em{
+    display : none;
+}
+  
+.task:hover{
+    position: relative;
+    z-index: 500;
+    text-decoration:none;
+}
+  
+.task:hover em {
+    display: block;
+    position: absolute;
+    top: 50px;
+    left: 0px;
+    padding: 1px;
+    color: white;
+    border: 1px solid black;
+    background: black;
+    width:360px;
+} 

@@ -65,9 +65,9 @@ Copyright (C) 2013  Clément DELESTRE
 	
 	<h3>Licence : </h3>
 	<p>
-		GPL : you can get the code source <a href="http://clement.delestre.emi.u-bordeaux1.fr/virtuLab.tar.gz">here</a> .
-	</p>
-  
+		
+GPL : you can get the code source <a href="http://clement.delestre.emi.u-bordeaux1.fr/virtuLab.tar.gz">here.</a> 
+<p> 
   
   <h3>Authors : </h3>
 	<p>
