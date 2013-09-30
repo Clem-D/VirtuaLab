@@ -59,17 +59,8 @@ function check($antibio, $igem_name) {
 function save($antibio, $igem_name) {
 
     $seq_name = $_POST['name'];
-    //$part_name="BBA_584";
-    //echo "part name : ".$part_name;
     $short_desc = $_POST['description'];
-    //$short_desc="desc";
-    //echo"desc : ".$short_desc;
     $member_name = $_SESSION['pseudo'];
-
-    //$member_name="john";
-    //secho"pseudo : ".$member_name;
-
-
 
 
     $dom = new DOMDocument();
@@ -77,12 +68,12 @@ function save($antibio, $igem_name) {
     $dom->formatOutput = true;
     
     	$dom->version = '1.0';
-	$dom->encoding = 'ISO-8859-1';   // A TESTER !!!!
+	$dom->encoding = 'ISO-8859-1';   
 
-// new row
+// new tag  row
     $new_row = $dom->createElement('experiment');
 
-/*new tag <date> */
+	/*new tag <date> */
 	$date = date('m/d/Y');
     $new_date = $dom->createElement('date');
 	$date_content = $dom->createTextNode($date);
@@ -90,14 +81,14 @@ function save($antibio, $igem_name) {
 
 
 
-// new seq_name
+	// new tag seq_name
     $new_seq_name = $dom->createElement('seq_name');
     $seq_name_content = $dom->createTextNode($seq_name);
     $new_seq_name->appendChild($seq_name_content);
 
 
 
-    // new igem_name
+    // new itag gem_name
     $new_igem_name = $dom->createElement('igem_name');
     $igem_name_content = $dom->createTextNode($igem_name);
     $new_igem_name->appendChild($igem_name_content);
@@ -108,7 +99,7 @@ function save($antibio, $igem_name) {
     $antibio_content = $dom->createTextNode($antibio);
     $new_antibio->appendChild($antibio_content);
 
-// new short_desc
+	// new short_desc
     $new_short_desc = $dom->createElement('short_desc');
     $short_desc_content = $dom->createTextNode($short_desc);
     $new_short_desc->appendChild($short_desc_content);
@@ -120,20 +111,7 @@ function save($antibio, $igem_name) {
     $member_name_content = $dom->createTextNode($member_name);
     $new_member_name->appendChild($member_name_content);
 
-    // new member_group
-    // faudrait une variable style $SESSION['groupe']
-    // pour chopper le groupe de l utilisateur
-// new member_id
-    // créer une fonction qui parse le champ "id" du fichier xml et qui retourne le maximum.
-    // ensuite l incrémenter de 1 puis l ajouter au fichier xml. 
-    // le résultat sera dans la variable $member_id;
-    /*
-      $new_member_id = $dom->createElement('member_id');
-      $member_id_content = $dom->createTextNode($member_id);
-      $new_member_id->appendChild($member_id_content); */
-
-
-
+    
 
 // add children
     $new_row->appendChild($new_seq_name);
@@ -152,7 +130,7 @@ function save($antibio, $igem_name) {
     echo "<script>alert('Your Biobrick was successfully created.')</script>";
  
 
-header('Refresh:0.1; url=../rubrics/biobricks_index.php'); 
+	header('Refresh:0.1; url=../rubrics/biobricks_index.php');  // refresh the page
     ob_flush();
     
 }
