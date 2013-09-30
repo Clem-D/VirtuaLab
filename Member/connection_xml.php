@@ -25,7 +25,7 @@ Copyright (C) 2013  Clément DELESTRE
 	$pass_hache = sha1($_POST['pass']);
 	$pseudo = $_POST['pseudo'];
 	$document_xml = new DomDocument();
-	$document_xml->load('XMLFiles/user.xml'); // Chargement à partir de zcode.xml
+	$document_xml->load('XMLFiles/user.xml'); 
 	$resultat_html = '';
 	$name=[];
 	$pass=[];
@@ -33,11 +33,11 @@ Copyright (C) 2013  Clément DELESTRE
 	$elements = $document_xml->getElementsByTagName('user');
 	foreach($elements as $element)
 	{
-		$enfants = $element->childNodes; // On récupère les nœuds enfants de zcode avec childNodes
+		$enfants = $element->childNodes; 
 						 
-		foreach($enfants as $enfant) // On prend chaque nœud enfant séparément
+		foreach($enfants as $enfant) // get all children ( "enfants " in french)
 		{
-			  $balise = $enfant->nodeName; // On prend le nom de chaque nœud
+			  $balise = $enfant->nodeName; 
 						 
 			  if ($balise == 'name')
 			  {				
