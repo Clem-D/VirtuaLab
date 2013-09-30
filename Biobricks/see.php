@@ -61,7 +61,7 @@ include('../utils/footer.php');
 function getAllXML($elements) {
     foreach ($elements as $elem) {
         $children = $elem->childNodes;
-        foreach ($children as $child) { // On prend chaque nœud enfant séparément
+        foreach ($children as $child) { 
             if ($child->nodeName == "member_name") {
                 $result[] = $child->nodeValue;
             } elseif ($child->nodeName == 'part_name') {
