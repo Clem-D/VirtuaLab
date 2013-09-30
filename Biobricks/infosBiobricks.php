@@ -39,7 +39,7 @@ $teams=getTeam($member_name);  //maybe severals team are possible
 
 echo "<section>";
 echo"<h1> Biobrick Informations </h1>";
-echo"<h3>IGEM Name</h3>"; // faudra mettre un H3 pour le CSS avec display:align
+echo"<h3>IGEM Name</h3>"; 
 echo" <h4>" . $_GET['igem_name'] . "</h4>";
 echo"<h3>Sequence Name</h3>";
 echo" <h4>" . $seqname . "</h4>";
@@ -66,8 +66,7 @@ echo "<p>" . $desc . "</p>";
 
 
 
-//echo"<h2>Use in projects : </h2>";
-/* là ça sera assez chaud à faire mais ça serait cool */
+//echo"<h2>Use in projects : </h2>"; <- to do
 
 echo "</section>";
 include('../utils/footer.php');
