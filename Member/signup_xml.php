@@ -32,45 +32,45 @@ Copyright (C) 2013  Clément DELESTRE
 	$dom->formatOutput = true;
 	$dom->load('XMLFiles/user.xml');
 
-	/*nouvelle balise <user>*/
+	/*new tag <user>*/
 
 	$new_user = $dom->createElement('user');
 
-	/*nouvelle balise <name>*/
+	/*new tage <name>*/
 
 	$new_name = $dom->createElement('name');
 	$name_content = $dom->createTextNode($name);
 	$new_name->appendChild($name_content);
 	$new_user->appendChild($new_name);
 	
-	/*nouvelle balise <pass>*/
+	/*new tage <pass>*/
 	
 	$new_pass = $dom->createElement('pass');
 	$pass_content = $dom->createTextNode($pass_hache);
 	$new_pass->appendChild($pass_content);
 	$new_user->appendChild($new_pass);
 	
-	/*nouvelle balise <email>*/
+	/*new tag <email>*/
 	
 	$new_email = $dom->createElement('email');
 	$email_content = $dom->createTextNode($email);
 	$new_email->appendChild($email_content);
 	$new_user->appendChild($new_email);
 	
-	/*nouvelle balise <team>*/
+	/*new tage <team>*/
 	
 	$new_team = $dom->createElement('team');
 	$team_content = $dom->createTextNode($team);	
 	$new_team->appendChild($team_content);
 	$new_user->appendChild($new_team);
 
-	/*on rattache tout le <user> a liste */
+
 	
 	$elements = $dom->getElementsByTagName('liste');
 	$element = $elements->item(0);
 	$element->appendChild($new_user);
 	
-	/*on enregistre dans un fichier*/
+
 	
 	$dom->save("XMLFiles/user.xml");
 	
