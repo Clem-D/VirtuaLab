@@ -34,7 +34,7 @@ include("../utils/header.php");
 if (isset($_POST['delete'])  ){
 
 	$_SESSION['pseudo']="";
-	$_SESSION['group']="";    // dans les autres pages, mettre un test sur ces 2 variables ( if != "" )
+	$_SESSION['group']="";    
 	shell_exec('rm XMLfiles/' . $name . '-' . $team . '.xml');
 	header('Location: delete.php'); 
 }
@@ -104,7 +104,9 @@ echo "
 
 include('../utils/footer.php'); 
  
- 
+ ////////////////////////
+ ///// FUNCTIONS ///////
+ ////////////////////////
  
 function getMail(){
 
