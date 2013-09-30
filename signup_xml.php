@@ -21,7 +21,16 @@ else {
 		save();
 	}
 }
-	
+
+
+////////////////////
+//// FUNCTIONS /////
+////////////////////
+
+/*
+*Check if the name is already use or not
+* return true or false
+*/
 function check(){
 global $name,$team;
 $querry = shell_exec('ls Member/XMLfiles/');
@@ -52,48 +61,40 @@ function save(){
 
 
 	/*new balise <user>*/
-
 	$new_user = $dom->createElement('user');
 
 	/*new balise <name>*/
-
 	$new_name = $dom->createElement('name');
 	$name_content = $dom->createTextNode($name);
 	$new_name->appendChild($name_content);
 	$new_user->appendChild($new_name);
 	
 	/*new balise <pass>*/
-	
 	$new_pass = $dom->createElement('pass');
 	$pass_content = $dom->createTextNode($pass_hache);
 	$new_pass->appendChild($pass_content);
 	$new_user->appendChild($new_pass);
 	
 	/*new balise <email>*/
-	
 	$new_email = $dom->createElement('email');
 	$email_content = $dom->createTextNode($email);
 	$new_email->appendChild($email_content);
 	$new_user->appendChild($new_email);
 	
 	/*new balise <team>*/
-	
 	$new_team = $dom->createElement('team');
 	$team_content = $dom->createTextNode($team);	
 	$new_team->appendChild($team_content);
 	$new_user->appendChild($new_team);
 
 
-/*new balise <group>*/
-	
+	/*new balise <group>*/
 	$new_group = $dom->createElement('group');
 	$group_content = $dom->createTextNode($group);	
 	$new_group->appendChild($group_content);
 	$new_user->appendChild($new_group);
 
 	/*new balise <date>*/
-	
-	
 	$date = date("m-d-Y");
 	$new_date = $dom->createElement('date');
 	$date_content = $dom->createTextNode($date);	
@@ -103,16 +104,11 @@ function save(){
 	
 	$dom->appendChild($new_user);
 	
-
 	
 	$dom->save('Member/XMLfiles/' . $name . '-' . $team . '.xml');
     
-    shell_exec('chmod 777 Member/XMLfiles/' . $name . '-' . $team . '.xml');
+    	shell_exec('chmod 777 Member/XMLfiles/' . $name . '-' . $team . '.xml');
     
-    // echo "<script>alert(\"You are now registered. Welcome ! \")</script> ";
-
-	
-	//header('Location: index.php');   
 	
 	echo " <p >You are now succesfully registred, log you on the <a href=\"index.php\"> index page.</a> </p>";
 }
