@@ -55,23 +55,19 @@ echo "</section>";
 
 include('../utils/footer.php');
 
-///////// FUNCTIONS
+///////////////////////////// 
+///////// FUNCTIONS ///////// 
+///////////////////////////// 
 function getAllXML($elements) {
     foreach ($elements as $elem) {
         $children = $elem->childNodes;
         foreach ($children as $child) { // On prend chaque nœud enfant séparément
             if ($child->nodeName == "member_name") {
-                //$result[]=echo"<br>member !!";
                 $result[] = $child->nodeValue;
             } elseif ($child->nodeName == 'part_name') {
                 $result[] = $child->nodeValue;
-                //echo"<br>PART NAME !!";
             }
-            /* 	
-              elseif ( $child->nodeName=='short_desc'){
-              //echo "<br> <br> La DESC :  :  ".$child->nodeValue;
-              $result[]=$child->nodeValue;
-              } */
+            
         }
     }
 
