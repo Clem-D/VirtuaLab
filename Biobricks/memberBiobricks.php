@@ -23,7 +23,7 @@ Copyright (C) 2013  Clément DELESTRE
     */
     
     
-// Afficher les info du XML (date, nom, team, group etc...) sauf le PWD
+// Show every info of the XML File (except the password)
 
 session_start();
 $title = "My Biobricks - Virtu-Lab";
