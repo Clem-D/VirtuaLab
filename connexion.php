@@ -24,10 +24,13 @@ else{
  /////// /////// ///////
 //// FUNCTIONS   ///////
  /////// /////// ///////
+ /*
+ *Check if the XML file exist or not
+ * Return true or false
+ */
 function checkName() {
 	global $pseudo,$team;
-	 $querry = shell_exec('ls Member/XMLfiles/'.$pseudo.'-'.$team.'.xml'); //more quickly than down
-    //$querry = shell_exec('ls -l Member/XMLfiles/ | cut -c49-');  
+	 $querry = shell_exec('ls Member/XMLfiles/'.$pseudo.'-'.$team.'.xml');
     $files = preg_split('#\s#', $querry);
     
     
