@@ -40,7 +40,6 @@ if (isset($_POST['add'])){
 	$size=100;
 	}
   // create biobricks' picture from biobricks' name
-  //$direction='../Pictures/'.$name.'.png';  // $_SERVER['DOCUMENT_ROOT'].
   
   $direction='../Pictures/'. $igem_name . '-' . $antibio.'.png';   //new name (test)
 	shell_exec('chmod 777 '.$direction);
