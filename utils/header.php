@@ -1,7 +1,5 @@
 <?php 
-///////////////////////////////////////////////////////////
-//////////////// FUNCTIONS ////////////////////////////////
-///////////////////////////////////////////////////////////
+
 /*
 
 Copyright (C) 2013  Clément DELESTRE
@@ -25,6 +23,9 @@ Copyright (C) 2013  Clément DELESTRE
     
     */
 
+///////////////////////////////////////////////////////////
+//////////////// FUNCTIONS ////////////////////////////////
+///////////////////////////////////////////////////////////
 
 function menu_count(){
     echo "
@@ -104,7 +105,7 @@ function menu_home(){
     
 }
 
-function menu_choose($rubric){ /* switch son rubric and call other functions */
+function menu_choose($rubric){ /* switch on rubric and call other functions */
 switch ($rubric) {
 	case "Home":
 		menu_home();
@@ -149,14 +150,7 @@ function checktimeAndLog(){
     }
     
 }
-/*
-function cheklog(){
-	if  (  isset($_SESSION['pseudo']  ) ){
-		echo "<br> <br><br><br> le pseudo : ".$_SESSION['pseudo'];
-	}
 
-}
-cheklog();*/
 checktimeAndLog();
 ?>
 
