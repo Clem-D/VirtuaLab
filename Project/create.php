@@ -1,8 +1,3 @@
-
-
-
-
-
 <?php
 /*
    
@@ -31,6 +26,7 @@ session_start();
 $rubric='Project';
 $title='Create a project';
 include("../utils/header.php");
+
 $team=$_SESSION['team'];
 ?>
   
@@ -41,28 +37,34 @@ $team=$_SESSION['team'];
             {             
               $bricks = array(); 
               $brickNames = array();
-              exec('ls ../Biobricks/XMLfiles',$elements);
+              exec('ls ../Biobricks/XMLfiles',$elements);//to get all saved biobricks
               foreach($elements as $element){
-                array_push($brickNames,str_replace('.xml','',$element));
+                array_push($brickNames,str_replace('.xml','',$element));//and only keep their name
+
                 $dom = new DOMDocument();
                 $dom->preserveWhiteSpace = false;
                 $dom->formatOutput = true;
-                $dom->load('../Biobricks/XMLfiles/'.$element);
+
+                $dom->load('../Biobricks/XMLfiles/'.$element); //to get into the file
                 $tags = $dom->getElementsByTagName('igem_name');
 		$antibio = $dom ->getElementsByTagName('antibio');
-		$antibio = $antibio->item(0)->nodeValue;
-                            $name = $dom ->getElementsByTagName('team');
-                            if ($tags->length == 0){
-                                if ($name->item(0)->nodeValue==$team){
-				  $bioB = str_replace('.xml','',$element);
-				  array_push($bricks,$bioB."-".$antibio);
-                                }
-                            }
-                            foreach ($tags as $tag) {
-			      $bioB = $tag->nodeValue;
-			      array_push($bricks,$bioB."-".$antibio);                 
-                            }
+		$antibio = $antibio->item(0)->nodeValue; //to get the antibiotic
+
+                $name = $dom ->getElementsByTagName('team');
+
+		if ($tags->length == 0){ //length=0, this is a new biobrick create by the team
+		  if ($name->item(0)->nodeValue==$team){
+		    $bioB = str_replace('.xml','',$element);
+		    array_push($bricks,$bioB);//to save into $bricks, the biobrick name related to his antibiotic
+		  }
+		}
+		foreach ($tags as $tag) {//if it's not a new biobrick, we use his iGEM Name
+		  $bioB = $tag->nodeValue;
+		  array_push($bricks,$bioB."-".$antibio);                 
+		}
               }
+	      
+	      //second form : list of biobricks
                 ?>
             <form id='form' class='bordure' action='project_capture.php' method='POST'>
                 <label for='name'> Project Name : </label></br>
@@ -90,6 +92,7 @@ $team=$_SESSION['team'];
             </form>
             <?php 
                         }
+//first form : name and number of biobrick
         if ( empty($_POST['number']) && empty($_POST['name']) ){
         ?>
             <form class='bordure' action='create.php' method='POST'>
