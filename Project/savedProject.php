@@ -23,6 +23,9 @@ Copyright (C) 2013  Clément DELESTRE
     */
     
 session_start();
+
+//////////////// TO OPEN A PROJECT ALREADY STARTED ///////////////
+
 $bNb=count($names);
 echo "<div id='project'>
     <h1 id='title'>$project</h1> 
