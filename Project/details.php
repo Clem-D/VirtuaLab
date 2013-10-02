@@ -63,26 +63,19 @@ foreach ($elements as $element){
 
 echo"
  <form id='details' method='POST' action='' name='details'>
-     </br><h1> $title </h1>      
-     
-     </br><input type='hidden' id='nbExperiment' value='0'> 
-
-     
+     </br><h1> $title </h1>           
+     </br><input type='hidden' id='nbExperiment' value='0'>      
      <h2 id='details'> Experiments </h2></br>
 </form>";
          
  if ($bool==true){
-     //echo "blal";
     include('openTask.php');    
 }
      
      echo "
      <form id='details' method='POST' action='details.php' name='experiment'>
          <button type='button' name='newTech' onclick='addExperiment()'> Add an experiment </button></br></br> 
-     </form>
-     
-
-
+     </form>   
 
 <input type='submit' id='pop_up' value='Exit' onclick='self.close();'/>";
 include('../utils/footer.php');?>
