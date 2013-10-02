@@ -25,7 +25,7 @@ Copyright (C) 2013  Clément DELESTRE
 $name1=&$_POST['img1'];
 $name2=&$_POST['img2'];
 
-if($name1!='' and $name2!=''){
+if($name1!='' and $name2!=''){ //to get the name of the 2 biobricks
   $name1=str_replace('.png','',$name1);
   $name2=str_replace('.png','',$name2);
 
@@ -34,8 +34,8 @@ if($name1!='' and $name2!=''){
   $image1 = imagecreatefrompng('../Pictures/'.$name1.'.png');
   $image2 = imagecreatefrompng('../Pictures/'.$name2.'.png');
 
-  $size=imagesx($image1)+imagesx($image2);
-  $image = imagecreate($size,20);
+  $size=imagesx($image1)+imagesx($image2);//calculate the image'slength
+  $image = imagecreate($size,20);//and create this image
 
   imagecopymerge($image,$image1,0,0,0,0,imagesx($image1),20,100);  
   imagecopymerge($image,$image2,imagesx($image1),0,0,0,imagesx($image2),20,100); imagepng($image,$name);
