@@ -27,10 +27,12 @@ $team= $_SESSION['team'];
 $pseudo=$_SESSION['pseudo'];
 $rubric='Project';
 $title='Continue a project - Virtua LAB';
+
 include($_SERVER['DOCUMENT_ROOT']."/virtuLab/utils/header.php");
+include("./searchFunctions.php");
 ini_set('display_errors', 1); 
 
-$allprojects=getAllProjects();
+$allprojects=getAllProjects(); 
 $size=count($allprojects);
 
 
@@ -39,8 +41,8 @@ echo "
 <section>
 <h1>Continue a project</h1>
 
-<h2>Chose a Project</h2>
- <label for='project_name'>Chose a project you want to manage :<br></label>
+<h2>Choose a Project</h2>
+ <label for='project_name'>Choose a project you want to manage :<br></label>
  
  <form class='' action='openProject.php' method='POST'>    
  
@@ -50,10 +52,8 @@ echo "
 
 
 for ( $i=0; $i<$size; $i++){
-
 	echo "
-    <option value=\"".str_replace(".xml",'',$allprojects[$i])."\">".str_replace(".xml",'',$allprojects[$i])."</option> ";
-   
+    <option value=\"".str_replace(".xml",'',$allprojects[$i])."\">".str_replace(".xml",'',$allprojects[$i])."</option> ";   
 }
 
 echo " </select> <br> <br>
@@ -61,54 +61,7 @@ echo " </select> <br> <br>
  </br></br> ";
 
 
-
-
-
 echo " </section> ";
- include($_SERVER['DOCUMENT_ROOT'].'/virtuLab/utils/footer.php'); 
- 
- 
- ////////////////////
- //// FUNCTIONS ////
- ////////////////////
-function getAllProjects(){
- 	global $team;
-	$projects = array();
-	$results=array();
-	exec('ls ../Project/XMLfiles',$elements);
-	foreach($elements as $element){
-		array_push($projects,str_replace(".xml",'',$element));
-		$teamcheck=checkTeam($team,$element);	
-		if ( $teamcheck ){
-			$results[]=$element;	
-		}
-	
-	}
-	//print_r($projects);
-	//print_r($results);
-	return $results;
-                            
-                            
-}
+include($_SERVER['DOCUMENT_ROOT'].'/virtuLab/utils/footer.php'); 
 
-function checkTeam($team,$file){
-	global $team;
-	$document_xml = new DomDocument();
-	$document_xml->load('XMLfiles/'.$file);
-	$elements = $document_xml->getElementsByTagName('project');
-	foreach($elements as $element){
-			$children = $element->childNodes; // On récupère les nœuds childs avec childNodes			 
-			foreach($children as $child) {
-				 $balise = $child->nodeName; // On prend le nom de chaque nœud		 
-				if ($balise == 'team'){		
-					if ($child->nodeValue ==  $team ){	
-						return true;
-					}
-				}
-			}
-		}
-
-	return false;
-}
- 
 ?>
