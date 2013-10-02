@@ -51,7 +51,6 @@ foreach($elements as $element){ //read each project
     else{
       include('savedProject.php');
     }
-  //}
 }
 include('../utils/footer.php');
 
