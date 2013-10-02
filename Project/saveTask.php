@@ -1,9 +1,9 @@
 <?php   
 /*
  
-Copyright (C) 2013  ClÃ©ment DELESTRE
+Copyright (C) 2013  Clément DELESTRE
                         Jonathan MELIUS
-                        MaÃ«va VEYSSIERE
+                        Maëva VEYSSIERE
                          
     version beta 0.5                   
  
@@ -24,6 +24,9 @@ Copyright (C) 2013  ClÃ©ment DELESTRE
      
 session_start();
  $pseudo=$_SESSION['pseudo'];
+
+////////////// TO SAVE THE TASK THAT HAD BEEN MODIFIED (XML) //////////////
+
 function addNode($node,$content,$dom,$exp){
     $name = $dom ->createElement($node);
     $name_content = $dom -> createTextNode($content);
