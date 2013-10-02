@@ -37,16 +37,19 @@ for($i=0;$i<$bNb;$i++){
 }
 echo "</section>";
 
-$idTask=$id+100;
-$idButton1=$id+50;
-$idButton2=$id+200;
+$idTask=$id+100; //image id
+$idButton1=$id+50;//button "add task" id
+$idButton2=$id+200;//button "add level" id
 
 echo"
 <form name='button' method='POST' action=''>
 <div class='level2'> Level 1 </div>
 <div class='task' name='0' id=$idTask ondrop='drop(event,this.id)' ondragover='allowDrop(event)'></div>
 <button type='button' id=$idButton1 name='0' onclick='addTask(this.id);'>New task</button>
-<button type='button' id=$idButton2 onclick='addLevel(this.id);'>New level</button>
+<button type='button' id=$idButton2 onclick='addLevel(this.id);'>New level</button>";
+
+// this is where the name of the 2 biobricks used to make a new task will be saved
+echo" 
 <input type='hidden' name='save1' id='save1' value='' />
 <input type='hidden' name='save2' id='save2' value='' />
 </form></br></div>
