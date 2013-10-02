@@ -22,6 +22,8 @@ Copyright (C) 2013  Clément DELESTRE
     
     */
     
+///////////////// TO SAVE A PROJECT IN A XML FILE ////////////////
+
 function createNode($dom,$name){
     //New tag <name>
     $new_name = $dom->createElement('name');
