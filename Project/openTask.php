@@ -1,4 +1,4 @@
-<script>
+<?php
 /*
 
 Copyright (C) 2013  Clément DELESTRE
@@ -21,6 +21,9 @@ Copyright (C) 2013  Clément DELESTRE
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
     
     */
+?>
+
+<script>
 function changeNumber($_number){
     var number = document.getElementById('nbExperiment');
     number.value = $_number;
@@ -28,6 +31,7 @@ function changeNumber($_number){
 </script>
 
 <?php
+  //function to create a new form when the user click on "new experiment"
 function writeInfo($_number,$_date,$_technician,$_method,$_antiB,$_comments,$_progress,$_bool){
     echo "<form id='details' method='POST' action='saveTask.php'>
         <h3> Experiment ".$_number."</h3></br>
@@ -114,16 +118,15 @@ foreach ($experiments as $element){
     }
     
     //we wrote them on the page
-        //if the experiment is already done
     if($progress == ''){
-        writeInfo($number,$date,$technician,$method,$antiB,$comments,$progress,true);
-        
+        writeInfo($number,$date,$technician,$method,$antiB,$comments,$progress,true);        
          echo "
           <script> changeNumber(".$number.") </script>
           <input type='submit' value='Save'>
           </form>";
     }
     else{
+        //if the experiment is already done
         writeInfo($number,$date,$technician,$method,$antiB,$comments,$progress,false);
         echo "
             <script> changeNumber(".$number.") </script>
