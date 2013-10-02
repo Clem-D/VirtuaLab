@@ -21,6 +21,8 @@ Copyright (C) 2013  Clément DELESTRE
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
     
     */
+
+//file to get the date and the hour when the user fill a new experiment
 $date = date('m/d/Y');
 $hour = date('H:i');
 
