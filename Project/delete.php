@@ -27,30 +27,31 @@ $team= $_SESSION['team'];
 $pseudo=$_SESSION['pseudo'];
 $title="Delete a Project - Virtu-Lab";
 $rubric="Project";
+
 include($_SERVER['DOCUMENT_ROOT']."/virtuLab/utils/header.php");
+include("./searchFunctions.php");
+
 ini_set('display_errors', 1); 
 ob_start();
+
 $allprojects=getAllProjects();
 $size=count($allprojects);
 
-if (  isset($_POST['project_name']) and $_POST['project_name'] != ""  ) {
+if (isset($_POST['project_name']) and $_POST['project_name'] != "") {
 
  	shell_exec('rm XMLfiles/' . $_POST['project_name'] . '.xml');
 	echo "<script>alert(\"The Project was deleted.\")</script> ";
 	header('Refresh:0.1; url=../rubrics/project_index.php'); 
     ob_flush();
-
-	//header("location: delete.php");  // for refresh (avec ça l alert ci dessus n apparait pas...)
 }
 
 
 echo "
-
 <section>
 <h1>Delete a project</h1>
 
-<h2>Chose a Project </h2>
- <label for='project_name'>Chose a project you want to delete :<br></label>
+<h2>Choose a Project </h2>
+ <label for='project_name'>Choose a project you want to delete :<br></label>
  
  <form class='' action='delete.php' method='POST'>    
  
@@ -70,52 +71,6 @@ echo " </select> <br> <br>
     <input type='submit' name='add' value='Delete'/>
  </br></br> ";
 
-
-
-
 include('../utils/footer.php');
-
-////////////////////
- //// FUNCTIONS ////
- ////////////////////
-function getAllProjects(){
- 	global $team;
-	$projects = array();
-	$results=array();
-	exec('ls ../Project/XMLfiles',$elements);
-	foreach($elements as $element){
-		array_push($projects,str_replace(".xml",'',$element));
-		$teamcheck=checkTeam($team,$element);	
-		if ( $teamcheck ){
-			$results[]=$element;	
-		}
-	
-	}
-	//print_r($projects);
-	//print_r($results);
-	return $results;
-                            
-                            
-}
-
-function checkTeam($team,$file){
-	global $team;
-	$document_xml = new DomDocument();
-	$document_xml->load('XMLfiles/'.$file);
-	$elements = $document_xml->getElementsByTagName('project');
-	foreach($elements as $element){
-			$children = $element->childNodes; // On récupère les nœuds childs avec childNodes			 
-			foreach($children as $child) {
-				 $balise = $child->nodeName; // On prend le nom de chaque nœud		 
-				if ($balise == 'team'){		
-					if ($child->nodeValue ==  $team ){	
-						return true;
-					}
-				}
-			}
-		}
-
-	return false;
-}
 
 ?>
