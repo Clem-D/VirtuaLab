@@ -61,10 +61,8 @@ Copyright (C) 2013  Clément DELESTRE
 	$project->appendChild($new_team);
         
 	/*new tag <brick>*/
-   //	echo $_POST['number'];
 	for ( $i=0; $i<$_POST['number']; $i++)
 	{
-       // echo $_POST[$i];
 		$new_brick = $dom->createElement('brick');
 		$brick_content = $dom->createTextNode($_POST[$i]);
 		$new_brick->appendChild($brick_content);
@@ -73,7 +71,7 @@ Copyright (C) 2013  Clément DELESTRE
 	
 	$dom->appendChild($project);
 
-	/*on enregistre dans un fichier*/
+        /*to save in a file*/
 	
 	$dom->save("XMLfiles/".$_POST['name'].".xml");
 	shell_exec("chmod 777 XMLfiles/".$_POST['name'].".xml");
